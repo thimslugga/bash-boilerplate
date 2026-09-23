@@ -1,0 +1,32 @@
+# .shellcheckrc - https://www.shellcheck.net
+
+# Use POSIX sh dialect
+#shell=sh
+
+# Use BASH shell dialect
+shell=bash
+
+# Allow opening any sourced file, even if not specified as input
+# (enable for projects with sourced files)
+external-sources=true
+
+# Look for sourced files relative to the checked script,
+# and also look for absolute paths in /mnt/chroot
+#source-path=SCRIPTDIR
+#source-path=/mnt/chroot
+
+# Since 0.9.0, values can be quoted with '' or "" to allow spaces
+#source-path="My Documents/scripts"
+
+# Set severity threshold (error, warning, info, style)
+#severity=style
+
+# Enable all optional checks
+enable=all
+
+# Disable specific checks if needed (uncomment to use)
+
+# Suppress common false positives:
+disable=SC1091  # Not following sourced file (not input)
+disable=SC2034  # Variable appears unused (often exported or used elsewhere)
+# disable=SC2086  # Double quote to prevent globbing and word splitting
